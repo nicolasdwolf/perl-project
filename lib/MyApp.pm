@@ -68,6 +68,8 @@ post '/transaction' => sub {
             
         } elsif ($type eq $model->TX_TYPE_DEBIT) {
             $model->debit($amount);
+        } else {
+            die "Type invalid\n";
         }
     } catch {                        
         my $message = $_;        
