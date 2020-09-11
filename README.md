@@ -1,14 +1,20 @@
 # perl-project
 
-## Install dependencies
+## UPDATE
+I realize I've forgot to provide a binary. My previous code couldn't be compiled so I've rewriten the controller to use a built-in web server and part of the model too.
+New code is /MyWebServer.pl which acts as the controller now.
+
+## Install dependencies << DEPRECATED
 `$ bash ./install.sh`
 
 Note: If starman is not installed with cpan, try with `apt install starman` (if running debian or derivates)
 
-## Start webserver
-`$ starman bin/app.psgi`
+## Start webserver 
+`$ ./MyWebServer`
 
-Point the browser to http://localhost:5000/
+Older version: `$ starman bin/app.psgi`
+
+Point the browser to http://localhost:5000/index.html
 
 ### Notes
 In order to have multiple concurrency support I've used starman web server which uses preforks.
